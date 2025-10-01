@@ -78,45 +78,54 @@ vect2	vect2::operator--(int)
 
 
 //	Comparisons
-vect2&	vect2::operator+=(const vect2& other) {
+vect2&	vect2::operator+=(const vect2& other)
+{
 	x += other.x;
 	y += other.y;
 	return (*this);
 }
 
-vect2&	vect2::operator-=(const vect2& other) {
+vect2&	vect2::operator-=(const vect2& other) 
+{
 	x -= other.x;
 	y -= other.y;
 	return (*this);
 }
 
-vect2&	vect2::operator*=(int t) {
+vect2&	vect2::operator*=(int t) 
+{
 	x *= t;
 	y *= t;
 	return (*this);
 }
 
-vect2	vect2::operator+(const vect2& other) const {
+vect2	vect2::operator+(const vect2& other) const 
+{
 	return (vect2(x + other.x, y + other.y));
 }
 
-vect2	vect2::operator-(const vect2& other) const {
+vect2	vect2::operator-(const vect2& other) const 
+{
 	return (vect2(x - other.x, y - other.y));
 }
 
-vect2	vect2::operator*(int t) const {
+vect2	vect2::operator*(int t) const 
+{
 	return (vect2(x * t, y * t));
 }
 
-vect2	vect2::operator-() const {
+vect2	vect2::operator-() const 
+{
 	return (vect2(-x, -y));
 }
 
-bool	vect2::operator==(const vect2& other) const {
+bool	vect2::operator==(const vect2& other) const 
+{
 	return (x == other.x && y == other.y);
 }
 
-bool	vect2::operator!=(const vect2& other) const {
+bool	vect2::operator!=(const vect2& other) const 
+{
 	return (!(this == &other));
 }
 
@@ -124,11 +133,13 @@ bool	vect2::operator!=(const vect2& other) const {
 
 
 
-vect2	operator*(int t, const vect2& other) {
+vect2	operator*(int t, const vect2& other) 
+{
 	return (vect2(t * other.x, t* other.y));
 }
 
-std::ostream&	operator<<(std::ostream& os, const vect2& other) {
+std::ostream&	operator<<(std::ostream& os, const vect2& other) 
+{
 	os << "{" << other[0] << ", " << other[1] << "}";
 	return (os);
 }
