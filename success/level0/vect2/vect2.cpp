@@ -116,15 +116,15 @@ vect2	vect2::operator*(int t) const
 	return (vect2(x * t, y * t));
 }
 
-
-
-
-
-
 vect2	vect2::operator-() const 
 {
 	return (vect2(-x, -y));
 }
+
+
+
+
+
 
 bool	vect2::operator==(const vect2& other) const 
 {
