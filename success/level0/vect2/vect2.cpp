@@ -22,8 +22,17 @@ vect2::~vect2() {}
 
 
 
+
+
 //	Element access
 int&    vect2::operator[](int index)
+{
+	if (index == 0)
+		return (x);
+	return (y);
+}
+
+int  vect2::operator[](int index) const
 {
 	if (index == 0) {
 		return (x);
@@ -31,13 +40,6 @@ int&    vect2::operator[](int index)
 	return (y);
 }
 
-const int&  vect2::operator[](int index) const
-{
-	if (index == 0) {
-		return (x);
-	}
-	return (y);
-}
 
 
 
@@ -113,6 +115,11 @@ vect2	vect2::operator*(int t) const
 {
 	return (vect2(x * t, y * t));
 }
+
+
+
+
+
 
 vect2	vect2::operator-() const 
 {
